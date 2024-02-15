@@ -21,7 +21,7 @@ function removeBackgroundColorById(elementId){
 function getTextElementValueById(elementId){
     const element = document.getElementById(elementId);
     const elementValueText = element.innerText;
-    const value = parseInt(element);
+    const value = parseInt(elementValueText);
     return value;
 }
 

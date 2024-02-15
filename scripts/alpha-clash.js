@@ -12,7 +12,7 @@ function handleKeyboardButtonPress(event){
     const playerPressed = event.key; // event.key use krle ami ki press kortisi oita javascript capture kortese 
 
     // stop the game if pressed "Esc"
-    if(playerPressed === 'Escaped'){
+    if(playerPressed === 'Escape'){
         gameOver();
     }
     
