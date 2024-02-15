@@ -11,6 +11,11 @@
 function handleKeyboardButtonPress(event){
     const playerPressed = event.key; // event.key use krle ami ki press kortisi oita javascript capture kortese 
 
+    // stop the game if pressed "Esc"
+    if(playerPressed === 'Escaped'){
+        gameOver();
+    }
+    
     // get the expected to press
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
@@ -102,5 +107,14 @@ function play(){
 function gameOver(){
     hideElementById('play-ground');
     showElementById('final-score');
+
+    // update final score
+    // 1. get the final score
+    const lastScore = getTextElementValueById('current-score');
+    setTextElementValueById('last-score', lastScore);
+
+    // Clear the last highlighted keyboard
+    const currentAlphabet = getElementTextById('current-alphabet');
+    removeBackgroundColorById(currentAlphabet);
 }
 
